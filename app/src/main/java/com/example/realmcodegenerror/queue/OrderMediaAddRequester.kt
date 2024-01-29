@@ -1,0 +1,19 @@
+package com.example.realmcodegenerror.queue
+
+import android.content.Context
+import io.realm.kotlin.Realm
+
+class OrderMediaAddRequester(
+    realm: Realm,
+    mobile2Service: Mobile2Service,
+    context: Context,
+    listener: Listener
+) : FileUploadQueueRequester<OrderMediaAddQro, OrderMediaRealmObject, ResponseEnvelope<ArrayList<Void>>>(
+    realm,
+    mobile2Service,
+    context,
+    OrderMediaAddQro::class,
+    OrderMediaRealmObject::class,
+    listener
+) {
+}
